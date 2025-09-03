@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 4 Dogs Fan Page</title>
+  <style>
+    body {
+      background: url("paw.jpg") no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #333;
+      text-align: center;
+      line-height: 1.6;
+    }
+    h1 {
+      margin-top: 20px;
+      color: #222;
+      text-shadow: 1px 1px 3px rgba(255,255,255,0.8);
+    }
+    .intro {
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      font-size: 16px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+      justify-items: center;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 12px;
+      padding: 15px;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .card img:hover {
+      transform: scale(1.05);
+    }
+    .info {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    /* hidden detail sections */
+    .details {
+      display: none;
+      max-width: 800px;
+      margin: 20px auto;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      text-align: left;
+    }
+    .details img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    .back {
+      display: inline-block;
+      margin-top: 15px;
+      background: #444;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .back:hover {
+      background: #222;
+    }
+  </style>
+</head>
+<body>
+  <h1>🐶 Top 4 Dogs of 2025 🐾</h1>
+
+  <div class="intro">
+    <p>
+      Dogs have always been known as humankind’s most loyal companions, but some breeds stand out 
+      for their intelligence, personality, and the strong bond they form with people. In 2025, these 
+      four breeds—Golden Retriever, German Shepherd, Bulldog, and Siberian Husky—have captured the 
+      hearts of dog lovers worldwide. Each one offers something unique: the Golden Retriever’s 
+      friendliness and reliability, the German Shepherd’s courage and intelligence, the Bulldog’s 
+      calm and loving nature, and the Husky’s playful energy and stunning looks. Together, they 
+      represent not only diversity in appearance and temperament, but also the enduring qualities 
+      that make dogs such an important part of our families and lives.
+    </p>
+  </div>
+
+  <!-- Dog cards -->
+  <div class="container">
+    <div class="card" onclick="showDetails('golden')">
+      <img src="golden.jpg" alt="Golden Retriever">
+      <div class="info">
+        <h3>1. Golden Retriever</h3>
+        <p>Friendly, loyal, and the ultimate family dog.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="showDetails('german')">
+      <img src="german.jpg" alt="German Shepherd">
+      <div class="info">
+        <h3>2. German Shepherd</h3>
+        <p>Brave and intelligent, a top working dog.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="showDetails('bulldog')">
+      <img src="bulldog.jpg" alt="Bulldog">
+      <div class="info">
+        <h3>3. Bulldog</h3>
+        <p>Calm and affectionate, a lovable companion.</p>
+      </div>
+    </div>
+
+    <div class="card" onclick="showDetails('husky')">
+      <img src="husky.jpg" alt="Siberian Husky">
+      <div class="info">
+        <h3>4. Siberian Husky</h3>
+        <p>Energetic and playful, famous for its striking blue eyes.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hidden Details Sections -->
+  <div id="golden" class="details">
+    <h2>Golden Retriever</h2>
+    <img src="golden.jpg" alt="Golden Retriever">
+    <p>
+      The Golden Retriever is one of the most popular and recognizable dog breeds in the world. 
+      Originally bred in Scotland in the mid-19th century, Golden Retrievers were developed to retrieve 
+      game during hunting. They are known for their gentle temperament, intelligence, and eagerness to 
+      please, making them highly trainable and reliable companions. Because of these traits, Golden 
+      Retrievers often serve as guide dogs, search-and-rescue dogs, and therapy animals.
+    </p>
+    <p>
+      Golden Retrievers are medium to large-sized dogs with a dense, water-repellent coat that is 
+      usually golden or cream-colored. They are friendly with children, adults, and other pets, 
+      which is why they are often considered the “ultimate family dog.” They require regular exercise 
+      to stay healthy, as they are active and playful by nature. With their loyal and affectionate 
+      personality, Golden Retrievers continue to be one of the top choices for families worldwide.
+    </p>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <div id="german" class="details">
+    <h2>German Shepherd</h2>
+    <img src="german.jpg" alt="German Shepherd">
+    <p>
+      The German Shepherd is a breed of working dog developed in Germany in the late 19th century. 
+      They are widely recognized for their intelligence, courage, and versatility. German Shepherds 
+      are used in police and military roles, as search-and-rescue dogs, and as service dogs. Their 
+      loyalty and protective nature make them excellent guardians and companions.
+    </p>
+    <p>
+      Known for their strong build and alert demeanor, German Shepherds require both physical and 
+      mental stimulation. They are highly trainable and excel in obedience, agility, and herding. 
+      When raised in a loving home, they are affectionate family members who bond closely with their owners.
+    </p>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <div id="bulldog" class="details">
+    <h2>Bulldog</h2>
+    <img src="bulldog.jpg" alt="Bulldog">
+    <p>
+      The Bulldog, often called the English Bulldog, is a medium-sized breed known for its muscular build, 
+      wrinkled face, and lovable personality. Originally bred in England for bull-baiting, they have 
+      since become gentle, affectionate pets adored worldwide. Bulldogs are calm and devoted, preferring 
+      a relaxed lifestyle with plenty of naps.
+    </p>
+    <p>
+      Despite their tough appearance, Bulldogs are friendly and affectionate, especially toward children. 
+      They adapt well to apartment living and do not require excessive exercise. Their gentle nature 
+      makes them excellent companions for families looking for a loyal, loving dog.
+    </p>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <div id="husky" class="details">
+    <h2>Siberian Husky</h2>
+    <img src="husky.jpg" alt="Siberian Husky">
+    <p>
+      The Siberian Husky is a medium-sized working dog bred by the Chukchi people of Siberia as a 
+      sled dog. They are known for their striking appearance, including thick fur, erect triangular ears, 
+      and piercing blue or multicolored eyes. Huskies are energetic, playful, and adventurous, making 
+      them ideal companions for active owners.
+    </p>
+    <p>
+      Huskies are intelligent but often independent, requiring patient training and lots of exercise. 
+      They are social dogs that thrive in packs, which makes them great for families with multiple pets. 
+      With their beauty, stamina, and lively personality, Siberian Huskies remain one of the most iconic 
+      and admired breeds worldwide.
+    </p>
+    <button class="back" onclick="goBack()">⬅ Back</button>
+  </div>
+
+  <script>
+    function showDetails(dogId) {
+      document.querySelector('.container').style.display = 'none';
+      document.querySelector('.intro').style.display = 'none';
+      document.querySelectorAll('.details').forEach(el => el.style.display = 'none');
+      document.getElementById(dogId).style.display = 'block';
+    }
+    function goBack() {
+      document.querySelector('.container').style.display = 'grid';
+      document.querySelector('.intro').style.display = 'block';
+      document.querySelectorAll('.details').forEach(el => el.style.display = 'none');
+    }
+  </script>
+</body>
+</html>
